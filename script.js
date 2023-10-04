@@ -35,7 +35,7 @@ getIPAddress();
 const btn = document.getElementById("btn");
 
 // Add a click event listener to the button
-button.addEventListener("click", function () {
+btn.addEventListener("click", function () {
   // Set the URL to redirect to
   const redirectUrl = "./main.html"; // Replacme with your desired URL
   // Redirect to the specified URL
