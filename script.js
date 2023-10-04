@@ -1,26 +1,29 @@
 const btn = document.getElementById("btn");
 
-async function getIPAddress() {
-  try {
-    // Make an HTTP request to ipinfo.io
-    const response = await fetch("https://ipinfo.io/json");
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-    const data = await response.json();
-    const ipAddress = data.ip;
-    // Display the IP address on the page
-    document.getElementById("ip-address").textContent =
-      "Your Current IP Address is " + ipAddress;
 
+async function handleGetUserIPAddress() {
+  try {
+      const response = await fetch('https://api.ipify.org/?format=json')
+      const result = await response.json();
+      return result.ip;
   } catch (error) {
-    console.error("Error fetching IP address:", error);
+      console.log(error.code, error.message);
   }
 }
 
-// Call the function to get the IP address
-getIPAddress();
+ async function toAddIp(){
+  try{
+     let ipAddress = await handleGetUserIPAddress();
+     document.getElementById('ip-address').innerHTML = ipAddress;
 
+  }
+  catch (error) {
+    alert('Something Went Wrong !');
+    return window.location.reload();
+}
+}
+
+toAddIp();
 
 // Add a click event listener to the button
 btn.addEventListener("click", function () {

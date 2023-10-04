@@ -29,36 +29,38 @@
       <section class="map-container">
         <h2>Your current Location</h2>
         <div id="map">
-          <iframe src="https://maps.google.com/maps?q=35.856737, 10.606619&output=embed" frameborder="0" style="border: 0;"></iframe>
+          <iframe
+            src="https://maps.google.com/maps?q=35.856737, 10.606619&output=embed"
+            frameborder="0"
+            style="border: 0"
+          ></iframe>
         </div>
       </section>
       <div class="about">
         <section class="more-info">
-          <h3>More Information About You</h3>
-          <p>Time Zone: <span></span></p>
-          <p>Date And Time: <span></span></p>
-          <p>Pincode: <span></span></p>
-          <p>Message:Number of pincode found: <span>21</span></p>
+          <h1>More Information About You</h1>
+            <p>Time Zone : <span id="timeZone"></span></p>
+            <p>Date & Time : <span id="dateTime"></span></p>
+            <p>PIN Code : <span id="pincode"></span></p>
+            <p>Message : <span id="message"></span></p>
         </section>
 
         <section class="postofice-cards">
           <h1>Post office Near about you</h1>
-          <input
-            type="text"
-            id="post-ofc-search"
-            placeholder="🔍 Search By Name"
-          />
-          <div class="card-container">
-            
-                <div class="card">
-                    <h4>Name <span></span></h4>
-                    <h4>Branch Type <span></span></h4>
-                    <h4>Delivery Status <span></span></h4>
-                    <h4>District <span></span></h4>
-                    <h4>Divison <span></span></h4>
-                </div>
+          <div class="searchBar">
+            <input type="text" name="searchInput" placeholder="🔍 Search By Name" onkeypress="searchFunction()" id="searchInput">
+          </div>
+          <div class="cardsGrid" id="cardsGrid">
+            <!-- <div class="card" id="card">
+              <h4>Name : &nbsp; <span id="name">${card.Name}</span></h4>
+              <h4>Branch Type : &nbsp; <span id="branchType">${card.BranchType}</span></h4>
+              <h4>Delivery Status : &nbsp; <span id="deliveryStatus">${card.DeliveryStatus}</span></h4>
+              <h4>District : &nbsp; <span id="district">${card.District}</span></h4>
+              <h4>Division : &nbsp; <span id="division">${card.Division}</span></h4>
+          </div>`; -->
           </div>
         </section>
+
       </div>
     </main>
     <script src="./main.js"></script>

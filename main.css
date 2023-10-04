@@ -100,7 +100,7 @@ iframe{
     font-weight: 700;
 }
 
-#post-ofc-search{
+#searchInput{
     background: #000;
     margin: 1.5% 0%;
     width: 100%;
@@ -114,7 +114,7 @@ iframe{
     outline: none;
 }
 
-#post-ofc-search::placeholder{
+#searchInput::placeholder{
     color: #B8BCCC;
     font-family: Montserrat;
     font-size: 1.2rem;
@@ -124,7 +124,7 @@ iframe{
     
 }
 
-.card-container{
+.cardsGrid{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
