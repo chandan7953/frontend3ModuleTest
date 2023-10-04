@@ -1,16 +1,4 @@
-// function getIPAddress() {
-//     // Make an HTTP request to ipinfo.io
-//     fetch('https://ipinfo.io/json')
-//       .then((response) => response.json())
-//       .then((data) => {
-//         const ipAddress = data.ip;
-//         // Display the IP address on the page
-//         console.log(ipAddress);
-//       })
-//       .catch((error) => {
-//         console.error('Error fetching IP address:', error);
-//       });
-//   }
+const btn = document.getElementById("btn");
 
 async function getIPAddress() {
   try {
@@ -23,7 +11,8 @@ async function getIPAddress() {
     const ipAddress = data.ip;
     // Display the IP address on the page
     document.getElementById("ip-address").textContent =
-      "Your IP address is: " + ipAddress;
+      "Your Current IP Address is " + ipAddress;
+
   } catch (error) {
     console.error("Error fetching IP address:", error);
   }
@@ -32,7 +21,6 @@ async function getIPAddress() {
 // Call the function to get the IP address
 getIPAddress();
 
-const btn = document.getElementById("btn");
 
 // Add a click event listener to the button
 btn.addEventListener("click", function () {
